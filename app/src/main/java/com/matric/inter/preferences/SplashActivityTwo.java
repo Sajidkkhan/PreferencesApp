@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivityTwo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +31,9 @@ public class SplashActivity extends AppCompatActivity {
                 String email = sharedPreferences.getString("EMAIL", "");
                 String passwrod = sharedPreferences.getString("PASSWORD", "");
                 if (ed_email.getText().toString().equals(email) && ed_passwrd.getText().toString().equals(passwrod)){
-                    Toast.makeText(SplashActivity.this, "Login Successfull", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SplashActivityTwo.this, "Login Successfull", Toast.LENGTH_LONG).show();
                 }else{
-                    Toast.makeText(SplashActivity.this, "Invalid Credintials", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SplashActivityTwo.this, "Invalid Credintials", Toast.LENGTH_LONG).show();
 
                 }
             }
@@ -41,14 +41,14 @@ public class SplashActivity extends AppCompatActivity {
         createNewAccoutn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(SplashActivity.this, SignUpActivity.class);
+                Intent intent= new Intent(SplashActivityTwo.this, SignUpActivity.class);
                 startActivity(intent);
             }
         });
         webview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(SplashActivity.this, WebViewActivity.class);
+                Intent intent= new Intent(SplashActivityTwo.this, WebViewActivity.class);
                 startActivity(intent);
             }
         });
